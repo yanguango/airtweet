@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+	<title>AirTweet</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="/css/main.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+	<div id="header">
+		<a href="/">Home</a><a href="/about">About</a><a href="/help">Help</a><a href="#">Source</a>
+		<h1>AirTweet</h1>
+		<p>A gtalk robot for twitter</p>
+	</div>
+	<div id="main">
+		<ol>
+			<li>
+				{% if not user %}
+				<a href="{{login_url}}">Sign in with Google Account.</a>
+				{% else %}
+				Have logined your Google Account.
+				<a href="{{logout_url}}">Logout </a>
+				{% endif %}
+			</li>
+			<li>
+				{% if not user or has_token %}
+				Authenticate your twitter account.
+				{% else %}
+				<a href="/connect">Authenticate your twitter account.</a>
+				{% endif %}
+			</li>
+			<li>Add airtweet@appspot.com to your gtalk contacts.</li>
+			<li>
+				{% if user and has_token %}
+				<a href="/help">Read help and play the robot.</a>
+				{% else %}
+				Read help and play the robot.
+				{% endif %}
+			</li>
+		</ol>
+	</div>
+	<div id="footer">
+	</div>
+</body>
+</html>
