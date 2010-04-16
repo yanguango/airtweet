@@ -46,7 +46,7 @@ div{
     -moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
-
+ul { list-style: disc}
 ol { list-style: upper-roman } 
 
 ol li{

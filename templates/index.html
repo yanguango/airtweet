@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="header">
-		<a href="/">Home</a><a href="/about">About</a><a href="/help">Help</a><a href="#">Source</a>
+		<a href="/">Home</a><a href="/about">About</a><a href="/help">Help</a><a href="http://github.com/isamsam/airtweet">Source</a>
 		<h1>AirTweet</h1>
 		<p>A gtalk robot for twitter</p>
 	</div>
@@ -24,7 +24,7 @@
 			</li>
 			<li>
 				{% if not user or has_token %}
-				Authenticate your twitter account.
+				Have authenticated your twitter account.
 				{% else %}
 				<a href="/connect">Authenticate your twitter account.</a>
 				{% endif %}
